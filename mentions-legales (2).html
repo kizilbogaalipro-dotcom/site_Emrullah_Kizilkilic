@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Kizilkilic Emrullah BTP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Styles spécifiques à la page mentions légales */
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 120px 48px 100px; }
+  .page-hero { margin-bottom: 64px; border-bottom: 1px solid var(--gris-bord); padding-bottom: 48px; }
+  .page-date { margin-top: 20px; font-size: .8rem; color: var(--gris-texte); font-weight: 300; }
+  .ml-section { margin-bottom: 56px; }
+  .ml-section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem; font-weight: 900; text-transform: uppercase;
+    color: var(--blanc-pur); margin-bottom: 24px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--gris-bord);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .ml-section-title::before { content: ''; display: block; width: 4px; height: 20px; background: var(--jaune); }
+  .ml-sub-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem; font-weight: 800; text-transform: uppercase;
+    color: var(--blanc-pur); margin: 28px 0 16px;
+  }
+  .ml-block {
+    background: var(--gris-mid); border: 1px solid var(--gris-bord);
+    padding: 28px 32px; margin-bottom: 16px;
+  }
+  .ml-block-label {
+    font-size: .65rem; font-weight: 700; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--jaune); margin-bottom: 8px;
+  }
+  .ml-block-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem; font-weight: 700; color: var(--blanc-pur);
+  }
+  .ml-block-val a { color: var(--jaune); text-decoration: none; }
+  .ml-block-val a:hover { text-decoration: underline; }
+  .ml-text {
+    font-size: .92rem; font-weight: 300; line-height: 1.8;
+    color: var(--gris-light); margin-bottom: 16px;
+  }
+  .ml-text strong { color: var(--blanc-pur); font-weight: 600; }
+  .ml-text a { color: var(--jaune); text-decoration: none; }
+  .ml-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+  .ml-list li {
+    font-size: .92rem; font-weight: 300; line-height: 1.7;
+    color: var(--gris-light); padding-left: 20px; position: relative;
+  }
+  .ml-list li::before { content: '—'; position: absolute; left: 0; color: var(--jaune); }
+  .ml-highlight {
+    background: rgba(232,184,75,.07); border: 1px solid rgba(232,184,75,.25);
+    border-left: 3px solid var(--jaune); padding: 20px 24px; margin-bottom: 16px;
+    font-size: .88rem; font-weight: 300; line-height: 1.75; color: var(--gris-light);
+  }
+  .ml-highlight strong { color: var(--jaune); }
+  .ml-highlight a { color: var(--jaune); text-decoration: none; }
+  .cookie-ok {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--gris-mid); border: 1px solid var(--gris-bord);
+    padding: 24px 28px;
+  }
+  .cookie-ok-icon {
+    flex-shrink: 0; width: 44px; height: 44px;
+    background: rgba(232,184,75,.1); border: 1px solid var(--jaune);
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .cookie-ok-text h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem; font-weight: 800; text-transform: uppercase;
+    color: var(--blanc-pur); margin-bottom: 4px;
+  }
+  .cookie-ok-text p { font-size: .85rem; font-weight: 300; color: var(--gris-light); line-height: 1.6; }
+  .btn-retour {
+    background: var(--jaune); color: var(--noir);
+    padding: 10px 22px; font-family: 'Barlow Condensed', sans-serif;
+    font-size: .9rem; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; text-decoration: none; transition: background .2s;
+  }
+  .btn-retour:hover { background: var(--jaune-dark); }
+  .page-footer {
+    border-top: 1px solid var(--gris-bord); padding: 40px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px; background: var(--gris-fonce);
+  }
+  .page-footer-copy { font-size: .75rem; font-weight: 300; color: var(--gris-texte); }
+  .page-footer-link { font-size: .75rem; font-weight: 300; color: var(--gris-texte); text-decoration: none; transition: color .2s; }
+  .page-footer-link:hover { color: var(--jaune); }
+  @media (max-width: 768px) {
+    .page-wrap { padding: 100px 24px 80px; }
+    .page-footer { padding: 32px 24px; }
+    .ml-block { padding: 20px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">Kizilkilic <span>Emrullah</span></a>
+  <nav>
+    <a href="index.html#metiers">Métiers</a>
+    <a href="index.html#methode">Méthode</a>
+    <a href="index.html#tarifs">Tarifs</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html" class="btn-retour">← Retour au site</a>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="page-hero">
+    <div class="section-tag">Informations légales</div>
+    <h1 class="section-title">Mentions légales,<em>RGPD & Cookies.</em></h1>
+    <p class="page-date">Dernière mise à jour : juin 2026</p>
+  </div>
+
+  <!-- 1. MENTIONS LÉGALES -->
+  <div class="ml-section">
+    <h2 class="ml-section-title">Mentions légales</h2>
+    <div class="ml-block">
+      <div class="ml-block-label">Éditeur du site</div>
+      <div class="ml-block-val">Kizilkilic Emrullah — Artisan BTP</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Forme juridique</div>
+      <div class="ml-block-val">Entrepreneur individuel</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Adresse</div>
+      <div class="ml-block-val">23 rue Saint-Just, 42000 Saint-Étienne, France</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">SIREN</div>
+      <div class="ml-block-val">847 644 192</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">SIRET</div>
+      <div class="ml-block-val">847 644 192 00019</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Numéro TVA intracommunautaire</div>
+      <div class="ml-block-val">FR85847644192</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Date de création</div>
+      <div class="ml-block-val">23 janvier 2019</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Téléphone</div>
+      <div class="ml-block-val"><a href="tel:0659251193">06 59 25 11 93</a></div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Email</div>
+      <div class="ml-block-val"><a href="mailto:emrullahkizilkilic2@gmail.com">emrullahkizilkilic2@gmail.com</a></div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Hébergeur</div>
+      <div class="ml-block-val">Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis — <a href="https://www.netlify.com" target="_blank">netlify.com</a></div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Directeur de la publication</div>
+      <div class="ml-block-val">Kizilkilic Emrullah</div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Qualification Qualibat BTP</div>
+      <div class="ml-block-val">N° [À COMPLÉTER] — vérifiable sur <a href="https://www.qualibat.com" target="_blank">qualibat.com</a></div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Certification RGE Eco Artisan</div>
+      <div class="ml-block-val">N° [À COMPLÉTER] — vérifiable sur <a href="https://www.faire.gouv.fr" target="_blank">faire.gouv.fr</a></div>
+    </div>
+    <div class="ml-block">
+      <div class="ml-block-label">Assurance décennale</div>
+      <div class="ml-block-val">AXA France — Contrat N° [À COMPLÉTER] — Garantie 10 ans sur tous travaux réalisés</div>
+    </div>
+  </div>
+
+  <!-- 2. RGPD -->
+  <div class="ml-section" id="rgpd">
+    <h2 class="ml-section-title">Protection des données personnelles (RGPD)</h2>
+    <p class="ml-text">Conformément au Règlement Général sur la Protection des Données (RGPD) du 25 mai 2018 et à la loi Informatique et Libertés, vous disposez de droits sur vos données personnelles.</p>
+
+    <h3 class="ml-sub-title">Données collectées</h3>
+    <p class="ml-text">Dans le cadre du formulaire de contact, les données suivantes peuvent être collectées :</p>
+    <ul class="ml-list">
+      <li><strong>Nom et prénom</strong> — pour identifier votre demande</li>
+      <li><strong>Numéro de téléphone</strong> — pour vous recontacter</li>
+      <li><strong>Adresse email</strong> — pour répondre par écrit</li>
+      <li><strong>Description du projet</strong> — pour évaluer votre besoin</li>
+    </ul>
+
+    <h3 class="ml-sub-title">Finalité du traitement</h3>
+    <p class="ml-text">Ces données sont collectées <strong>uniquement</strong> pour répondre à votre demande de devis. Elles ne sont ni vendues, ni cédées, ni transmises à des tiers.</p>
+
+    <h3 class="ml-sub-title">Durée de conservation</h3>
+    <p class="ml-text">Vos données sont conservées <strong>le temps nécessaire au traitement de votre demande</strong>, et au maximum 3 ans à compter du dernier contact, conformément aux recommandations de la CNIL.</p>
+
+    <h3 class="ml-sub-title">Vos droits</h3>
+    <ul class="ml-list">
+      <li><strong>Droit d'accès</strong> — obtenir une copie des données vous concernant</li>
+      <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer au traitement</li>
+      <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format lisible</li>
+    </ul>
+
+    <div class="ml-highlight">
+      <strong>Pour exercer vos droits :</strong> contactez-nous à <a href="mailto:emrullahkizilkilic2@gmail.com">emrullahkizilkilic2@gmail.com</a> ou par courrier au 23 rue Saint-Just, 42000 Saint-Étienne. Réponse sous un mois.
+    </div>
+    <p class="ml-text">Réclamation possible auprès de la <strong>CNIL</strong> — <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a></p>
+  </div>
+
+  <!-- 3. COOKIES -->
+  <div class="ml-section">
+    <h2 class="ml-section-title">Politique de cookies</h2>
+    <div class="cookie-ok">
+      <div class="cookie-ok-text">
+        <h4>Ce site n'utilise aucun cookie</h4>
+        <p>Aucun cookie de traçage, de publicité ou d'analyse n'est déposé sur votre navigateur. Aucun consentement n'est requis.</p>
+      </div>
+    </div>
+    <p class="ml-text" style="margin-top:20px">Ce site ne fait appel à aucun service tiers (Google Analytics, Facebook Pixel...). Votre navigation est entièrement privée.</p>
+  </div>
+
+  <!-- 4. PROPRIÉTÉ INTELLECTUELLE -->
+  <div class="ml-section">
+    <h2 class="ml-section-title">Propriété intellectuelle</h2>
+    <p class="ml-text">L'ensemble du contenu (textes, structure, design) est la propriété exclusive de Kizilkilic Emrullah. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+    <p class="ml-text">Les marques et logos mentionnés (Qualibat, RGE Eco Artisan, AXA) sont la propriété de leurs détenteurs respectifs.</p>
+  </div>
+
+  <!-- 5. RESPONSABILITÉ -->
+  <div class="ml-section">
+    <h2 class="ml-section-title">Limitation de responsabilité</h2>
+    <p class="ml-text">Les tarifs affichés sont indicatifs et ne constituent pas un devis contractuel. Tout engagement commercial nécessite un devis écrit signé par les deux parties.</p>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <p class="page-footer-copy">© 2026 Kizilkilic Emrullah — SIRET 849 886 196 00012</p>
+  <a href="index.html" class="page-footer-link">← Retour au site</a>
+</footer>
+
+</body>
+</html>
